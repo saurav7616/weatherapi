@@ -1,0 +1,17 @@
+html, body{
+  background-color: rgb(43, 18, 18);
+  color: aliceblue;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 70vw;
+  margin: 0 auto;
+  border: 1px white solid;
+  border-radius: 30px;
+  margin-top: 5%;
+}
