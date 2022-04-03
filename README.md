@@ -1,4 +1,4 @@
-application showing weather details by accepting city from user.
+# application showing weather details by accepting city from user.
 
 link to application : https://weather---api.herokuapp.com/
 
