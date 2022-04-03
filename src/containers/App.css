@@ -8,10 +8,17 @@ html, body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 60vh;
   width: 70vw;
   margin: 0 auto;
+  padding-top: 5%;
   border: 1px white solid;
   border-radius: 30px;
   margin-top: 5%;
+}
+
+.note{
+  margin-top: auto;
+  justify-self: flex-end;
+  text-align: center;
 }

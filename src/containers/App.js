@@ -4,12 +4,12 @@ import Nav from '../components/Nav.js';
 import './App.css';
 
 function App() {
-  const [city, setCity] = useState('Ranchi');
-  const [tab, setTab] = useState('current');
-  const [data, setData] = useState({})
+  const [city, setCity] = useState('Ranchi');                     //city as state variable
+  const [tab, setTab] = useState('current');                      //tab(current, forecast) as state variable
+  const [data, setData] = useState({})                            //data received from custom api endpoint
 
   useEffect(()=>{
-    fetch(`https://cryptic-thicket-72101.herokuapp.com/${tab}?city=${city}`)
+    fetch(`https://cryptic-thicket-72101.herokuapp.com/${tab}?city=${city}`)   //fetching api when city or tab changes
     .then(res => res.json())
     .then(data => setData(data))
     .catch(err => console.log(err))
@@ -18,6 +18,7 @@ function App() {
     <div className="App">
       <Nav setCity={setCity} setTab={setTab}/>
       <Dashboard data={data} tab={tab}/>
+      <h4 className='note'>{"*NOTE : Click on labels to edit."}</h4>
     </div>
   );
 }

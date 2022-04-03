@@ -1,9 +1,9 @@
 const Dashboard = ({data, tab})=>{
 
-  const handleChange = (event,old_value)=>{
-    let new_value = event.target.textContent
+  //handling label change
+  const handleChange = (new_value,old_value)=>{
     if(new_value != old_value){
-      fetch(`https://cryptic-thicket-72101.herokuapp.com/labelchange?tab=${tab}`,{
+      fetch(`https://cryptic-thicket-72101.herokuapp.com/labelchange?tab=${tab}`,{      //fetching label change api endpoint
         method: 'post',
 			  headers: {'Content-Type': 'application/json'},
 			  body: JSON.stringify({
@@ -19,11 +19,13 @@ const Dashboard = ({data, tab})=>{
 
   return(
     <div style={{margin: '50px auto 0px auto', width: '50%'}}>
+      
+      {/* ----------------------mapping received data--------------------- */}
       { Object.keys(data).map((ele,index) => {
           return  <div key={index}>
                     <span style={{ width: '30%' ,display:'inline-flex', justifyContent: 'space-between'}}>
                       <span 
-                        onBlur={(e)=>handleChange(e, ele)}
+                        onBlur={(e)=>handleChange(e.target.textContent, ele)}
                         style={{fontWeight: 'bolder'}}
                         contentEditable={true}
                       >
