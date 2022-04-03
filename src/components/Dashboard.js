@@ -18,10 +18,10 @@ const Dashboard = ({data, tab})=>{
   }
 
   return(
-    <div style={{marginTop: '50px', width: '30%'}}>
+    <div style={{margin: '50px auto 0px auto', width: '50%'}}>
       { Object.keys(data).map((ele,index) => {
           return  <div key={index}>
-                    <span style={{ width: '40%' ,display:'inline-flex', justifyContent: 'space-between'}}>
+                    <span style={{ width: '30%' ,display:'inline-flex', justifyContent: 'space-between'}}>
                       <span 
                         onBlur={(e)=>handleChange(e, ele)}
                         style={{fontWeight: 'bolder'}}
